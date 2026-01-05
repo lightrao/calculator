@@ -1,50 +1,52 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.0.0 -> 1.1.0
+- List of modified principles:
+  - Added Technology Stack (Vanilla HTML/CSS/JS)
+  - Added Data Storage (CSV files)
+- Added sections: None
+- Removed sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md (✅ updated: tech stack alignment)
+  - .specify/templates/spec-template.md (✅ aligned)
+  - .specify/templates/tasks-template.md (✅ aligned)
+- Follow-up TODOs: None.
+-->
+
+# Calculator Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity & Readability
+Code MUST be simple, concise, and easy to read. Complexity must be justified. We prefer readability over micro-optimizations. 
+Rationale: To ensure the codebase remains maintainable and accessible to all contributors.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test-First Development (NON-NEGOTIABLE)
+Test-Driven Development (TDD) is mandatory. Tests MUST be written and seen to fail before any implementation logic is added.
+Rationale: To guarantee correctness and provide a safety net for future refactoring.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Modular Design
+Logic MUST be encapsulated in small, single-responsibility modules. Avoid global state and tight coupling between arithmetic logic and interface logic.
+Rationale: To enable independent testing and reuse of calculator components.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+## Development Standards
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Technology Stack
+The project MUST use vanilla HTML, CSS, and JavaScript as much as possible. External frameworks should be avoided unless absolutely necessary and justified.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Data Storage
+Metadata and persistent state MUST be stored in local CSV files. JSON or other formats should be avoided for primary storage to maintain simplicity and accessibility.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### API & Interface
+Calculator functions MUST have clear, descriptive names. Input validation is mandatory for all public methods to prevent undefined behavior.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution is the supreme authority for development practices in the Calculator project.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendments
+Any changes to these principles require a version bump and a Sync Impact Report.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Compliance
+All implementation plans MUST include a "Constitution Check" phase. Pull Requests (PRs) that violate core principles will be rejected.
+
+**Version**: 1.1.0 | **Ratified**: 2026-01-05 | **Last Amended**: 2026-01-05
